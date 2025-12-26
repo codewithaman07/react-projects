@@ -2,123 +2,129 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { RiReactjsLine } from 'react-icons/ri';
 import { TbBrandNextjs } from 'react-icons/tb';
-import { SiMongodb } from 'react-icons/si';
+import { SiMongodb, SiPython } from 'react-icons/si';
 import { FaNodeJs, FaHtml5, FaCss3Alt, FaJs } from 'react-icons/fa';
 
 const Tech = () => {
   const technologies = [
-    { 
-      icon: <FaHtml5 className='text-4xl lg:text-5xl text-orange-500' />, 
-      key: 'html',
-      name: 'HTML5',
-      color: 'from-orange-500/20 to-red-500/20',
-      hoverColor: 'hover:border-orange-500/50'
-    },
-    { 
-      icon: <FaCss3Alt className='text-4xl lg:text-5xl text-blue-500' />, 
-      key: 'css',
-      name: 'CSS3',
-      color: 'from-blue-500/20 to-cyan-500/20',
-      hoverColor: 'hover:border-blue-500/50'
-    },
-    { 
-      icon: <FaJs className='text-4xl lg:text-5xl text-yellow-500' />, 
-      key: 'js',
-      name: 'JavaScript',
-      color: 'from-yellow-500/20 to-orange-500/20',
-      hoverColor: 'hover:border-yellow-500/50'
-    },
-    { 
-      icon: <RiReactjsLine className='text-4xl lg:text-5xl text-cyan-400' />, 
-      key: 'react',
-      name: 'React',
-      color: 'from-cyan-400/20 to-blue-400/20',
-      hoverColor: 'hover:border-cyan-400/50'
-    },
-    { 
-      icon: <TbBrandNextjs className='text-4xl lg:text-5xl text-white' />, 
-      key: 'nextjs',
-      name: 'Next.js',
-      color: 'from-neutral-300/20 to-neutral-500/20',
-      hoverColor: 'hover:border-neutral-300/50'
-    },
-    { 
-      icon: <SiMongodb className='text-4xl lg:text-5xl text-green-400' />, 
-      key: 'mongodb',
-      name: 'MongoDB',
-      color: 'from-green-400/20 to-emerald-400/20',
-      hoverColor: 'hover:border-green-400/50'
-    },
-    { 
-      icon: <FaNodeJs className='text-4xl lg:text-5xl text-green-500' />, 
-      key: 'nodejs',
-      name: 'Node.js',
-      color: 'from-green-500/20 to-lime-500/20',
-      hoverColor: 'hover:border-green-500/50'
-    }
+    { icon: FaHtml5, key: 'html', name: 'HTML5', color: '#E34F26', glow: 'shadow-orange-500/30' },
+    { icon: FaCss3Alt, key: 'css', name: 'CSS3', color: '#1572B6', glow: 'shadow-blue-500/30' },
+    { icon: FaJs, key: 'js', name: 'JavaScript', color: '#F7DF1E', glow: 'shadow-yellow-500/30' },
+    { icon: RiReactjsLine, key: 'react', name: 'React', color: '#61DAFB', glow: 'shadow-cyan-400/30' },
+    { icon: TbBrandNextjs, key: 'nextjs', name: 'Next.js', color: '#FFFFFF', glow: 'shadow-white/20' },
+    { icon: SiMongodb, key: 'mongodb', name: 'MongoDB', color: '#47A248', glow: 'shadow-green-500/30' },
+    { icon: FaNodeJs, key: 'nodejs', name: 'Node.js', color: '#339933', glow: 'shadow-green-400/30' },
+    { icon: SiPython, key: 'python', name: 'Python', color: '#3776AB', glow: 'shadow-blue-400/30' },
+  ];
+
+  const additionalSkills = [
+    { name: 'Flask', color: 'from-gray-400 to-gray-500' },
+    { name: 'MySQL', color: 'from-cyan-400 to-blue-400' },
+    { name: 'Git', color: 'from-orange-400 to-red-400' },
+    { name: 'Tailwind CSS', color: 'from-cyan-400 to-blue-400' },
+    { name: 'AI/ML', color: 'from-amber-400 to-orange-400' },
+    { name: 'Data Analytics', color: 'from-orange-400 to-amber-400' },
+    { name: 'REST APIs', color: 'from-amber-400 to-yellow-400' },
+    { name: 'TypeScript', color: 'from-blue-500 to-cyan-400' },
   ];
 
   return (
-    <div className='border-b border-neutral-800/50 pb-20 pt-20'>
-      <motion.h2 
+    <div id="tech" className='border-b border-cyan-500/10 pb-20 pt-20'>
+      <motion.h2
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
         transition={{ duration: 1 }}
-        className='mb-20 text-center text-4xl lg:text-5xl font-light'>
-        <span className="bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">
+        className='mb-20 text-center text-4xl lg:text-5xl font-bold'>
+        <span className="bg-gradient-to-r from-amber-300 via-orange-400 to-cyan-400 bg-clip-text text-transparent">
           Technologies
         </span>
       </motion.h2>
-      
-      <div className="flex flex-wrap items-center justify-center gap-6 lg:gap-8 max-w-4xl mx-auto">
+
+      {/* Main Tech Grid with 3D floating effect */}
+      <div className="flex flex-wrap items-center justify-center gap-6 lg:gap-8 max-w-5xl mx-auto">
         {technologies.map((tech, index) => (
           <motion.div
             key={tech.key}
-            className={`group relative flex flex-col items-center justify-center rounded-2xl border-2 border-neutral-700/50 ${tech.hoverColor} p-6 w-28 h-28 sm:w-32 sm:h-32 lg:w-36 lg:h-36 bg-gradient-to-br ${tech.color} backdrop-blur-sm hover:scale-110 transition-all duration-500 cursor-pointer`}
+            className={`group relative flex flex-col items-center justify-center rounded-2xl p-6 w-28 h-28 sm:w-32 sm:h-32 lg:w-36 lg:h-36 cursor-pointer`}
             whileInView={{ opacity: 1, y: 0 }}
             initial={{ opacity: 0, y: 50 }}
-            animate={{
-              y: [0, -8, 0] 
+            whileHover={{
+              scale: 1.15,
+              y: -15,
+              rotateX: 10,
+              rotateY: -10,
             }}
             transition={{
-              duration: 2.5, 
-              repeat: Infinity,  
-              ease: "easeInOut",  
-              delay: index * 0.2  
+              duration: 0.4,
+              delay: index * 0.05,
+              type: "spring",
+              stiffness: 300
             }}
+            style={{ transformStyle: 'preserve-3d' }}
           >
-            <div className="mb-2 group-hover:scale-110 transition-transform duration-300">
-              {tech.icon}
+            {/* Glass background */}
+            <div className="absolute inset-0 bg-[#0b1528]/70 backdrop-blur-xl rounded-2xl border border-cyan-400/20 group-hover:border-amber-400/50 transition-all duration-300"></div>
+
+            {/* Colored glow on hover */}
+            <div
+              className={`absolute -inset-2 rounded-3xl blur-xl opacity-0 group-hover:opacity-60 transition-all duration-500`}
+              style={{ backgroundColor: tech.color + '20' }}
+            ></div>
+
+            {/* Icon */}
+            <div className="relative mb-2 group-hover:scale-110 transition-transform duration-300">
+              <tech.icon
+                className="text-4xl lg:text-5xl transition-all duration-300"
+                style={{ color: tech.color }}
+              />
             </div>
-            <span className="text-xs lg:text-sm font-medium text-neutral-400 group-hover:text-white transition-colors duration-300">
+
+            {/* Name */}
+            <span className="relative text-xs lg:text-sm font-medium text-cyan-300/70 group-hover:text-white transition-colors duration-300">
               {tech.name}
             </span>
-            <div className="absolute -inset-1 bg-gradient-to-r from-purple-600/0 to-pink-600/0 group-hover:from-purple-600/20 group-hover:to-pink-600/20 rounded-2xl blur-xl transition-all duration-500"></div>
-            <div className="absolute top-1 right-1 w-1 h-1 bg-white/40 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping transition-all duration-300"></div>
-            <div className="absolute bottom-2 left-2 w-0.5 h-0.5 bg-cyan-400/60 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-pulse transition-all duration-300"></div>
+
+            {/* Neon bottom border */}
+            <div
+              className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 rounded-full group-hover:w-3/4 transition-all duration-500"
+              style={{ backgroundColor: tech.color, boxShadow: `0 0 10px ${tech.color}` }}
+            ></div>
+
+            {/* Corner sparkle */}
+            <div className="absolute top-2 right-2 w-1 h-1 bg-amber-300 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-star-twinkle transition-opacity duration-300"></div>
           </motion.div>
         ))}
       </div>
+
+      {/* Additional Skills with gradient tags */}
       <motion.div
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: 50 }}
-        transition={{ duration: 0.8, delay: 0.5 }}
-        className="mt-16 text-center"
+        transition={{ duration: 0.8, delay: 0.3 }}
+        className="mt-20 text-center"
       >
-        <h3 className="text-xl lg:text-2xl font-light mb-6 text-neutral-300">
+        <h3 className="text-xl lg:text-2xl font-light mb-8 text-cyan-300/70">
           Additional Skills
         </h3>
-        <div className="flex flex-wrap justify-center gap-3 max-w-2xl mx-auto">
-          {['Python', 'Flask', 'MySQL', 'Git', 'Tailwind CSS', 'AI/ML', 'Data Analytics'].map((skill, index) => (
+        <div className="flex flex-wrap justify-center gap-3 max-w-3xl mx-auto">
+          {additionalSkills.map((skill, index) => (
             <motion.span
-              key={skill}
-              className="px-4 py-2 bg-gradient-to-r from-neutral-800/50 to-neutral-700/50 text-sm text-neutral-300 rounded-full border border-neutral-600/30 hover:border-purple-500/50 hover:text-white transition-all duration-300 cursor-default"
-              whileHover={{ scale: 1.05 }}
+              key={skill.name}
+              className="group relative px-5 py-2.5 rounded-full cursor-default overflow-hidden"
+              whileHover={{ scale: 1.1, y: -3 }}
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.3, delay: index * 0.1 }}
+              transition={{ duration: 0.3, delay: index * 0.05 }}
             >
-              {skill}
+              {/* Background */}
+              <div className="absolute inset-0 bg-[#0b1528]/70 backdrop-blur-xl rounded-full border border-cyan-400/20 group-hover:border-amber-400/50 transition-all duration-300"></div>
+
+              {/* Gradient glow on hover */}
+              <div className={`absolute inset-0 bg-gradient-to-r ${skill.color} opacity-0 group-hover:opacity-20 transition-opacity duration-300 rounded-full`}></div>
+
+              <span className="relative text-sm font-medium text-cyan-300/70 group-hover:text-white transition-all duration-300">
+                {skill.name}
+              </span>
             </motion.span>
           ))}
         </div>
