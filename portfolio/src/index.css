@@ -235,6 +235,16 @@ a:focus {
   box-shadow: 0 0 15px rgba(165, 243, 252, 0.5);
 }
 
+/* Pointer cursor for all interactive elements */
+button,
+a,
+[role="button"],
+input[type="submit"],
+input[type="button"],
+.cursor-pointer {
+  cursor: pointer;
+}
+
 /* Glassmorphism card - Night */
 .glass-card {
   background: rgba(11, 21, 40, 0.7);

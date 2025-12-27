@@ -48,20 +48,26 @@ const Projects = () => {
 
               {/* Floating action buttons on hover */}
               <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-4 group-hover:translate-y-0">
-                <motion.button
-                  className="p-4 bg-gradient-to-r from-cyan-400 to-amber-400 text-[#0b1528] rounded-full shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50 transition-shadow"
+                <motion.a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-4 bg-gradient-to-r from-cyan-400 to-amber-400 text-[#0b1528] rounded-full shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50 hover:scale-110 transition-all duration-300"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   <FaExternalLinkAlt className="w-4 h-4" />
-                </motion.button>
-                <motion.button
-                  className="p-4 bg-[#0b1528]/80 backdrop-blur-xl text-white rounded-full border border-cyan-400/50 hover:border-amber-400 transition-colors"
+                </motion.a>
+                <motion.a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-4 bg-[#0b1528]/80 backdrop-blur-xl text-white rounded-full border border-cyan-400/50 hover:border-amber-400 hover:scale-110 transition-all duration-300"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   <FaGithub className="w-4 h-4" />
-                </motion.button>
+                </motion.a>
               </div>
 
               {/* Project number badge */}
@@ -97,8 +103,11 @@ const Projects = () => {
 
               {/* Project Links */}
               <div className="flex gap-3 pt-4 border-t border-cyan-400/20">
-                <motion.button
-                  className="flex-1 relative px-4 py-2.5 rounded-xl overflow-hidden group/btn"
+                <motion.a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 relative px-4 py-2.5 rounded-xl overflow-hidden group/btn cursor-pointer"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
@@ -108,15 +117,18 @@ const Projects = () => {
                     View Project
                     <FaArrowRight className="w-3 h-3 group-hover/btn:translate-x-1 transition-transform" />
                   </span>
-                </motion.button>
-                <motion.button
-                  className="px-4 py-2.5 border border-cyan-400/50 text-cyan-300 text-sm rounded-xl hover:border-amber-400 hover:text-amber-300 hover:bg-amber-500/10 transition-all duration-300 flex items-center justify-center gap-2"
+                </motion.a>
+                <motion.a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2.5 border border-cyan-400/50 text-cyan-300 text-sm rounded-xl hover:border-amber-400 hover:text-amber-300 hover:bg-amber-500/10 transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
                   <FaGithub className="w-4 h-4" />
                   Code
-                </motion.button>
+                </motion.a>
               </div>
             </div>
 

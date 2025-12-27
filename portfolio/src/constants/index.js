@@ -1,7 +1,6 @@
-import project1 from "../assets/projects/project-1.jpg";
-import project2 from "../assets/projects/project-2.jpg";
-import project3 from "../assets/projects/project-3.jpg";
-import project4 from "../assets/projects/project-4.jpg";
+import stableMindImg from "../assets/projects/stable-mind.png";
+import shopSmartyImg from "../assets/projects/shop-smarty.png";
+import stocksSmartImg from "../assets/projects/stocks-smart.png";
 
 export const HERO_CONTENT = `"I am a passionate full-stack developer with experience in building scalable web applications. I specialize in front-end technologies like React and Next.js, along with back-end technologies such as Node.js, Express, MySQL, and MongoDB. Additionally, I have worked on projects involving AI, chatbots, and data analytics. My goal is to leverage my skills to create impactful and user-centric digital solutions."`;
 export const ABOUT_TEXT = `"I am a dedicated and versatile full-stack developer with a passion for building efficient and user-friendly web applications. With hands-on experience in technologies like React, Next.js, Node.js, Express, MySQL, and MongoDB, I enjoy solving complex problems and creating impactful digital solutions. My journey in web development has been fueled by curiosity and a drive to continuously learn and adapt. Beyond coding, I explore AI, competitive programming, and contribute to innovative projects that push technological boundaries."`;
@@ -13,31 +12,31 @@ export const EXPERIENCES = [
 
 export const PROJECTS = [
   {
-    title: "E-Commerce Website Extension",
-    image: project1,
+    title: "STABLE MIND",
+    image: stableMindImg,
     description:
-      "A fully functional e-commerce website extension which helps in comparing two similar category products ",
-    technologies: ["HTML", "CSS", "Flask", "Node.js", "Next.js"],
+      "AI-powered mental health platform featuring Gen AI chat, RAG-based personalized responses, mood tracking, breathing exercises, and daily affirmations.",
+    technologies: ["Next.js", "TypeScript", "Node.js", "MongoDB", "RAG"],
+    link: "https://stablemind.vercel.app/",
+    github: "https://github.com/codewithaman07/stablemind",
   },
   {
-    title: "Book Recommendation System",
-    image: project2,
-    description:"An AI-powered book recommender system leveraging LLM to provide personalized reading suggestions.",
-    technologies: ["Python","Flask", "Vector Search", "Numpy" ,"LLM", ],
+    title: "SHOP SMARTY",
+    image: shopSmartyImg,
+    description:
+      "Hackathon winning web extension with sentiment analysis and web scraping to empower data-driven purchase decisions, improving product selection efficiency by 40%.",
+    technologies: ["JavaScript", "Node.js", "REST APIs", "Web Scraping"],
+    link: "https://devfolio.co/projects/shopsmart-analyser-4fed",
+    github: "https://github.com/psr-codes/hack-extension",
   },
   {
-    title: "Portfolio Website",
-    image: project3,
+    title: "STOCKS SMART",
+    image: stocksSmartImg,
     description:
-      "A personal portfolio website showcasing projects, skills, and contact information.",
-    technologies: ["HTML", "CSS", "React", "Tailwind"],
-  },
-  {
-    title: "Blogging Platform",
-    image: project4,
-    description:
-      "A platform for creating and publishing blog posts, with features like rich text editing, commenting, and user profiles.",
-    technologies: ["HTML", "CSS", "Vue.js", "Express", "MySQL"],
+      "Full-stack stock analysis dashboard with global stock search, watchlist management, interactive charts, and AI-powered news summarization with sentiment analysis.",
+    technologies: ["Next.js", "Clerk", "Tailwind CSS", "AI/ML"],
+    link: "https://thestocksmart.vercel.app/",
+    github: "https://github.com/codewithaman07/Stock-Smart",
   },
 ];
 

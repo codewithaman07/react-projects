@@ -14,21 +14,21 @@ const About = () => {
     },
     {
       title: 'Backend',
-      description: 'Node.js, Express, MongoDB',
+      description: 'Node.js, Express.js',
       icon: FaServer,
       gradient: 'from-amber-400 to-orange-500',
       shadowColor: 'shadow-amber-500/20'
     },
     {
       title: 'Database',
-      description: 'MySQL, MongoDB',
+      description: 'MySQL, MongoDB, PostgreSQL',
       icon: FaDatabase,
       gradient: 'from-orange-400 to-red-500',
       shadowColor: 'shadow-orange-500/20'
     },
     {
       title: 'AI & ML',
-      description: 'Python, LLM, Data Analytics',
+      description: 'Python, Langchain, RAG, Data analysis',
       icon: FaBrain,
       gradient: 'from-cyan-300 to-amber-400',
       shadowColor: 'shadow-cyan-500/20'
